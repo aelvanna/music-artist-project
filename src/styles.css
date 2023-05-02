@@ -23,7 +23,7 @@ body {
 
 .grid-2-columns {
   grid-template-columns: 1fr 1fr;
-  text-align: justify;
+  text-align: left;
   padding-top: 50px;
 }
 
@@ -137,10 +137,13 @@ main h2 {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 5px;
-  color: #272044;
-  opacity: 0.3;
+  background: rgba(78, 236, 139, 0.1);
+  color: #03471d;
+  opacity: 0.7;
   text-transform: uppercase;
   margin: 0;
+  padding: 2px 6px;
+  display: inline;
 }
 
 main h3 {
