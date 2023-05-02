@@ -214,11 +214,6 @@ footer a {
   text-align: left;
 }
 
-.secondary h2,
-.secondary h3 {
-  color: white;
-}
-
 @media (max-width: 960px) {
   header {
     padding: 60px 0;
