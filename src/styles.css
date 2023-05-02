@@ -50,17 +50,19 @@ body {
 }
 
 .btn {
+  display: block;
+  color: white;
   font-size: 14px;
   letter-spacing: 2px;
+  line-height: 1.5;
   text-transform: uppercase;
   background: #15b551;
   border-radius: 100px;
   box-shadow: 1px 4px rgba(0, 0, 0, 0.2);
   text-decoration: none;
-  color: white;
+  text-align: center;
   margin-top: 24px;
   padding: 16px 32px;
-  display: inline-block;
 }
 
 section {
