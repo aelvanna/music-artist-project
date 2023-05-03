@@ -53,9 +53,15 @@ body {
   border-radius: 15px;
 }
 
-.embed {
+.embed-spotify {
   width: 100%;
   aspect-ratio: 1/1;
+  border-radius: 15px;
+}
+
+.embed-video {
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 
 .card-body {
@@ -92,8 +98,15 @@ section.secondary {
   background: #f8f8f8;
 }
 
+.video-gallery .card {
+  background: rgba(20, 161, 74, 0.1);
+}
+
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+  background-image: linear-gradient(
+      rgba(190, 228, 192, 0.4),
+      rgba(0, 0, 0, 0.5)
+    ),
     url("../images/got7-homecoming-group-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
