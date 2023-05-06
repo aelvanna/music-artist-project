@@ -3,6 +3,41 @@ body {
   background: #15b551;
 }
 
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+thead th,
+tbody td {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 5px 5px;
+}
+
+thead tr {
+  background: #15b551;
+  color: white;
+  text-align: center;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+  background: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -17,20 +52,16 @@ body {
   grid-gap: 64px;
 }
 
-.members-photo-img-responsive {
-  max-width: 100%;
-}
-
 .img-responsive {
-  max-width: 100%;
+  max-width: 80%;
 }
 
-.grid-3-columns-members-intro .members-photo-img-responsive {
-  width: 70%;
+.first-image .img-responsive {
+  filter: contrast(130%) brightness(90%) drop-shadow(5px 5px 10px black);
 }
 
 .grid-2-columns {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr;
   text-align: left;
   padding-top: 50px;
 }
@@ -45,6 +76,14 @@ body {
 
 .grid-4-columns {
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.member-info {
+  padding-top: 50px;
+}
+
+.member-info img {
+  filter: brightness(115%) contrast(110%);
 }
 
 .card {
@@ -85,7 +124,8 @@ body {
 }
 
 .ig-btn {
-  padding: 12px 12x;
+  padding: 5px 5px;
+  width: 50%;
 }
 
 section {
