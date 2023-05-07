@@ -82,6 +82,10 @@ tbody tr:last-of-type {
   padding-top: 50px;
 }
 
+.member-info .grid-4-columns {
+  grid-gap: 20px;
+}
+
 .member-info img {
   filter: brightness(115%) contrast(110%);
 }
@@ -324,5 +328,94 @@ footer a {
   footer,
   footer li {
     text-align: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  header {
+    padding: 40px;
+    background-size: 110%;
+    background-position: center;
+  }
+
+  header h1 {
+    font-size: 40px;
+  }
+
+  header h2 {
+    margin-top: 45px;
+    font-size: 16px;
+  }
+
+  header h3 {
+    display: none;
+  }
+
+  header a {
+    margin: 50px;
+    padding: 8px 5px;
+    font-size: 10px;
+  }
+
+  main h3 {
+    font-size: 30px;
+  }
+
+  .member-info {
+    padding: 0;
+  }
+
+  .member-info .grid-4-columns {
+    grid-gap: 0;
+  }
+
+  .embed-video {
+    aspect-ratio: 4/3;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  header {
+    padding: 100px;
+  }
+
+  .embed-spotify {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 15px;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 200px;
+  }
+
+  section {
+    padding: 35px;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
+    padding: 350px;
+  }
+  .hide {
+    display: none;
   }
 }
