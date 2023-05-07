@@ -53,10 +53,7 @@ tbody tr:last-of-type {
 }
 
 .img-responsive {
-  max-width: 80%;
-}
-
-.first-image .img-responsive {
+  max-width: 100%;
   filter: contrast(130%) brightness(90%) drop-shadow(5px 5px 10px black);
 }
 
@@ -83,11 +80,12 @@ tbody tr:last-of-type {
 }
 
 .member-info .grid-4-columns {
-  grid-gap: 20px;
+  grid-gap: 30px;
 }
 
 .member-info img {
   filter: brightness(115%) contrast(110%);
+  border-radius: 15px;
 }
 
 .card {
@@ -127,9 +125,9 @@ tbody tr:last-of-type {
   padding: 16px 32px;
 }
 
-.ig-btn {
-  padding: 5px 5px;
-  width: 50%;
+.btn-type-2 {
+  padding: 10px 5px;
+  width: 100%;
 }
 
 section {
@@ -147,10 +145,7 @@ section.secondary {
 }
 
 header {
-  background-image: linear-gradient(
-      rgba(190, 228, 192, 0.4),
-      rgba(0, 0, 0, 0.5)
-    ),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
     url("../images/got7-homecoming-group-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -298,8 +293,74 @@ footer a {
   text-align: left;
 }
 
-@media (max-width: 960px) {
+.jayb-info,
+.mark-info,
+.jackson-info,
+.jinyoung-info,
+.youngjae-info,
+.bambam-info,
+.yugyeom-info {
+  position: relative;
+}
+
+.jayb-info .overlay,
+.mark-info .overlay,
+.jackson-info .overlay,
+.jinyoung-info .overlay,
+.youngjae-info .overlay,
+.bambam-info .overlay,
+.yugyeom-info .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(20, 161, 74, 0.2);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: 0.5s ease;
+  border-radius: 15px;
+}
+
+.jayb-info:hover .overlay,
+.mark-info:hover .overlay,
+.jackson-info:hover .overlay,
+.jinyoung-info:hover .overlay,
+.youngjae-info:hover .overlay,
+.bambam-info:hover .overlay,
+.yugyeom-info:hover .overlay {
+  transform: scale(1);
+}
+
+.jayb-info .text,
+.mark-info .text,
+.jackson-info .text,
+.jinyoung-info .text,
+.youngjae-info .text,
+.bambam-info .text,
+.yugyeom-info .text {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  overflow-wrap: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen, (min-width: 425px) and (max-width: 768px) {
   header {
+    background-size: 100%;
+    background-position: center;
     padding: 60px 0;
   }
 
@@ -315,75 +376,8 @@ footer a {
     font-size: 12px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    grid-gap: 32px;
-    text-align: center;
-  }
-
   section {
     padding: 30px;
-  }
-
-  footer,
-  footer li {
-    text-align: center;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 425px) {
-  header {
-    padding: 40px;
-    background-size: 110%;
-    background-position: center;
-  }
-
-  header h1 {
-    font-size: 40px;
-  }
-
-  header h2 {
-    margin-top: 45px;
-    font-size: 16px;
-  }
-
-  header h3 {
-    display: none;
-  }
-
-  header a {
-    margin: 50px;
-    padding: 8px 5px;
-    font-size: 10px;
-  }
-
-  main h3 {
-    font-size: 30px;
-  }
-
-  .member-info {
-    padding: 0;
-  }
-
-  .member-info .grid-4-columns {
-    grid-gap: 0;
-  }
-
-  .embed-video {
-    aspect-ratio: 4/3;
-  }
-
-  .card-body {
-    padding: 0;
-  }
-
-  .hide {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  header {
-    padding: 100px;
   }
 
   .embed-spotify {
@@ -391,19 +385,9 @@ footer a {
     aspect-ratio: 16/9;
     border-radius: 15px;
   }
-
-  .hide {
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  header {
-    padding: 200px;
-  }
-
-  section {
-    padding: 35px;
+  .card-body,
+  .lyrics p {
+    text-align: center;
   }
 
   .hide {
@@ -411,11 +395,61 @@ footer a {
   }
 }
 
-@media (min-width: 1440px) {
-  header {
-    padding: 350px;
+@media screen and (max-width: 425px) {
+  header h1 {
+    font-size: 30px;
+  }
+
+  header h3 {
+    display: none;
+  }
+
+  header a {
+    padding: 10px 10px;
+    font-size: 10px;
+  }
+
+  .embed-spotify,
+  .embed-video {
+    aspect-ratio: 1/1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer,
+  footer li {
+    text-align: center;
   }
   .hide {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    padding: 200px 0;
+  }
+
+  header h1 {
+    font-size: 200px;
+  }
+
+  header h2,
+  main h2 {
+    font-size: 30px;
+  }
+
+  header h3 {
+    font-size: 45px;
+  }
+
+  header a {
+    font-size: 20px;
+  }
+
+  main p,
+  table {
+    font-size: 28px;
+    line-height: 2;
   }
 }
