@@ -291,7 +291,7 @@ footer a {
 
 .lyrics p {
   margin: 0;
-  text-align: left;5
+  text-align: left;
 }
 
 .jayb-info,
@@ -302,13 +302,11 @@ footer a {
 .bambam-info,
 .yugyeom-info {
   position: relative;
-
 }
 
 .member-info img {
   display: block;
   position: relative;
-
 }
 
 .jayb-info .overlay,
@@ -360,9 +358,28 @@ footer a {
   overflow-wrap: normal;
 }
 
-@media screen and (max-width: 768px) {
-  .grid {
+@media screen and (max-width: 425px) {
+  header h1 {
+    font-size: 30px;
+  }
+
+  header h3 {
+    display: none;
+  }
+
+  header a {
+    padding: 10px 10px;
+    font-size: 10px;
+  }
+
+  .grid,
+  .member-info-2.grid {
     grid-template-columns: 1fr;
+  }
+
+  .embed-spotify,
+  .embed-video {
+    aspect-ratio: 1/1;
   }
 }
 
@@ -389,6 +406,26 @@ footer a {
     padding: 30px;
   }
 
+  section.secondary,
+  section.video-gallery {
+    max-width: 70%;
+  }
+
+  div.first-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  .grid.grid-3-columns {
+    grid-template-columns: 1fr;
+  }
+
   .embed-spotify {
     width: 100%;
     aspect-ratio: 16/9;
@@ -404,27 +441,7 @@ footer a {
   }
 }
 
-@media screen and (max-width: 425px) {
-  header h1 {
-    font-size: 30px;
-  }
-
-  header h3 {
-    display: none;
-  }
-
-  header a {
-    padding: 10px 10px;
-    font-size: 10px;
-  }
-
-  .embed-spotify,
-  .embed-video {
-    aspect-ratio: 1/1;
-  }
-}
-
-@media screen and (max-width: 1024px) {
+@media screen, (min-width: 768px) and (max-width: 1024px) {
   header h1 {
     font-size: 96px;
   }
@@ -446,13 +463,18 @@ footer a {
     text-align: center;
   }
 
+  footer li {
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+  }
+
   .member-info-2 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin: 0 auto;
   }
 
-  .member-info-2 img {
-    max-width: 73%;
+  .grid-3-columns {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .about-text-col {
@@ -462,6 +484,11 @@ footer a {
   .about-text-block {
     display: block;
     padding: 10px 30px;
+  }
+
+  section.secondary,
+  section.video-gallery {
+    max-width: 100%;
   }
 }
 
@@ -491,5 +518,10 @@ footer a {
   table {
     font-size: 18px;
     line-height: 2;
+  }
+
+  section.secondary,
+  section.video-gallery {
+    max-width: 100%;
   }
 }
