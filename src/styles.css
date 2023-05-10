@@ -524,4 +524,9 @@ footer a {
   section.video-gallery {
     max-width: 100%;
   }
+
+  .grid.songs-grid,
+  .grid.video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
