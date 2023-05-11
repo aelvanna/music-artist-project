@@ -358,36 +358,16 @@ footer a {
   overflow-wrap: normal;
 }
 
-@media screen and (max-width: 425px) {
-  header h1 {
-    font-size: 30px;
-  }
-
-  header h3 {
-    display: none;
-  }
-
-  header a {
-    padding: 10px 10px;
-    font-size: 10px;
-  }
-
-  .grid,
-  .member-info-2.grid {
-    grid-template-columns: 1fr;
-  }
-
-  .embed-spotify,
-  .embed-video {
-    aspect-ratio: 1/1;
+@media screen and (max-width: 576px) {
+  header {
+    background-size: 100%;
+    padding: 20px 0;
   }
 }
 
-@media screen, (min-width: 425px) and (max-width: 768px) {
-  header {
-    background-size: 100%;
-    background-position: center;
-    padding: 60px 0;
+@media screen and (max-width: 768px) {
+  body div {
+    text-align: center;
   }
 
   header h1 {
@@ -402,8 +382,13 @@ footer a {
     font-size: 12px;
   }
 
+  header a {
+    padding: 5px 10px;
+    margin: 10px 0;
+  }
+
   section {
-    padding: 30px;
+    padding: 10px;
   }
 
   section.secondary,
@@ -411,18 +396,47 @@ footer a {
     max-width: 70%;
   }
 
+  .img-responsive {
+    max-width: 50%;
+  }
+
   div.first-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
   }
 
   footer {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .grid.grid-3-columns {
+  footer li {
+    text-align: center;
+  }
+
+  .jayb-info img,
+  .mark-info img,
+  .jackson-info img,
+  .jinyoung-info img,
+  .youngjae-info img,
+  .bambam-info img,
+  .yugyeom-info img {
+    margin: 0 auto;
+  }
+
+  .jayb-info .overlay,
+  .mark-info .overlay,
+  .jackson-info .overlay,
+  .jinyoung-info .overlay,
+  .youngjae-info .overlay,
+  .bambam-info .overlay,
+  .yugyeom-info .overlay {
+    width: 50%;
+    left: 25%;
+  }
+
+  .grid {
     grid-template-columns: 1fr;
   }
 
@@ -439,60 +453,27 @@ footer a {
   .about-text-block {
     display: none;
   }
+
+  .member-info .text {
+    font-size: 1em;
+  }
 }
 
-@media screen, (min-width: 768px) and (max-width: 1024px) {
-  header h1 {
-    font-size: 96px;
-  }
-
-  header h2 {
-    font-size: 24px;
-  }
-
-  header h3 {
-    font-size: 18px;
-  }
-
-  main p {
-    font-size: 18px;
-  }
-
-  footer,
-  footer li {
-    text-align: center;
-  }
-
-  footer li {
-    margin-bottom: 10px;
-    letter-spacing: 1.5px;
-  }
-
-  .member-info-2 {
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 auto;
-  }
-
-  .grid-3-columns {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .about-text-col {
-    display: none;
+@media screen and (min-width: 992px) {
+  section.secondary {
+    padding: 10px;
   }
 
   .about-text-block {
-    display: block;
-    padding: 10px 30px;
+    display: none;
   }
-
-  section.secondary,
-  section.video-gallery {
-    max-width: 100%;
+  .grid.songs-grid,
+  .grid.video-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
   header {
     padding: 200px 0;
   }
@@ -528,5 +509,11 @@ footer a {
   .grid.songs-grid,
   .grid.video-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .introduction {
+    vertical-align: middle;
   }
 }
